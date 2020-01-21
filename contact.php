@@ -27,7 +27,7 @@ $mail = $_POST['mail'];
 $sex = $_POST['sex'];
 $sujet = $_POST['Sujet'];
 $com = $_POST['commentaire'];
-
+$box = $_POST['Confirmation'];
 
 echo " Nom : ".$nom ."<br>";
 echo " Prenom : ".$prenom ."<br>";
@@ -39,6 +39,7 @@ echo " Sexe :" .$sex."<br>";
 echo " Email : ".$mail."<br>";
 echo " Sujet : ".$sujet."<br>";
 echo " Commentaire : ".$com."<br>";
+echo " Confirmations : ".$box."<br>";
 ?>
 
 
@@ -165,6 +166,33 @@ else
     $sexErr = "Valide ! ".$sex;
 }
 echo $sexErr."<br>";
+
+
+// verif Commentaire ====== $com = $_POST['commentaire'];
+if (empty($_POST["commentaire"]))
+{
+    $comErr = "Il faut un commentaire";
+}
+else
+{
+    $comErr = " Comentaire ! : ".$sex;
+}
+echo $comErr."<br>";
+
+
+
+//<input type="checkbox" name="Confirmation" value="Confirmation">J'accepte le traitemen informatique de ce formulaire.
+
+// verif checkBox ====== $box = $_POST['Comfirmation'];
+
+if(is_object($_POST['Comfirmation'])){
+    $boxErr = "Confirmaiton requise";
+}
+else{
+    $boxErr = " Confirmer ! ".$box;
+}
+
+
 
 
 
