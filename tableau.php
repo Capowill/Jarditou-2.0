@@ -1,49 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php
+include("assets/PHP/entete.php");
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/styles.css">
-
-
-
-    <title>jarditou</title>
-</head>
 
 <body class="container-fluid p-0">
-    <!-- en tête du site -->
-    <header>
-        <div class="row">
-            <div class="col-xs-7 col-lg-7">
-                <img class="img-fluid" src="assets/images/jarditou_logo.jpg" alt="Logo Jarditou"
-                    title="Logo Jarditou" />
-            </div>
-            <div class="col-xs-5 col-lg-5">
-                <p class="display-3 m-5"> <strong>Tout le jardin</strong></p>
-            </div>
-        </div>
-        <p class="m-3"><strong>La qualité depuis 70 ans</strong></p>
-    </header>
-    <!-- fin de en tête du site -->
-
-    <ul class="nav bg-dark">
-        <li class="nav-item m-3">
-            <a href="index.html">Acceuil</a>
-        </li>
-        <li class="nav-item m-3">
-            <a href="Tableau.html">Tableau</a>
-        </li>
-        <li class="nav-item m-3">
-            <a href="contact.html">Contact</a>
-        </li>
-    </ul>
-
-    <img id="promo" src="assets/images/promotion.jpg" width="100%" alt="promotion"
-        title="promotion sur les lames de terrasse">
-
+    <?php
+    include("assets/PHP/header.php");
+    ?>
     <h1>Tableau</h1>
     <hr>
 
@@ -110,7 +73,6 @@
                 <td>Noir</td>
             </tr>
 
-
             <tr>
                 <td><img src="assets/images/13.jpg" width="200" height="150" alt="Brouettes" title="Brouettes"></td>
                 <td>13</td>
@@ -124,23 +86,9 @@
     </table>
     <hr>
 
-    <footer>
-        <ul class="nav bg-dark">
-            <li class="nav-item m-3">
-                <a href="">Mentions légales</a>
-            </li>
-            <li class="nav-item m-3">
-                <a href="">Horaires</a>
-            </li>
-            <li class="nav-item m-3">
-                <a href="">Plan du site</a>
-            </li>
-        </ul>
-    </footer>
-
-
-
-
+    <?php
+    include("assets/PHP/pieddepage.php");
+    ?>
+    
 </body>
-
 </html>
