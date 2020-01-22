@@ -175,7 +175,7 @@ if (empty($_POST["commentaire"]))
 }
 else
 {
-    $comErr = " Comentaire ! : ".$sex;
+    $comErr = " Comentaire ! : ".$com;
 }
 echo $comErr."<br>";
 
@@ -185,13 +185,13 @@ echo $comErr."<br>";
 
 // verif checkBox ====== $box = $_POST['Comfirmation'];
 
-if(is_object($_POST['Comfirmation'])){
-    $boxErr = "Confirmaiton requise";
-}
-else{
+if(isset($_POST['Confirmation'])){
     $boxErr = " Confirmer ! ".$box;
 }
-
+else{
+    $boxErr = "Confirmaiton requise";
+}
+echo $boxErr."<br>";
 
 
 
