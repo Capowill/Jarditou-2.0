@@ -7,9 +7,10 @@ include("assets/PHP/entete.php");
     include("assets/PHP/header.php");
     ?>
     <section id="contener">
+        <img id="promo" src="assets/images/promotion.jpg" width="100%" alt="promotion" title="promotion sur les lames de terrasse">
         <!-- corp du site ( contenue general ) blblbl -->
         <div class="row">
-            <div class="col-lg-7 col-xs-7 col-sm-7 m-5">
+            <div class="justify-content-between col-lg-7 col-xs-7 col-sm-7 m-5">
                 <h1>Acceuil</h1>
                 <hr> <!-- la ligne continue -->
                 <h2>L'entreprise</h2>
@@ -37,15 +38,18 @@ include("assets/PHP/entete.php");
                     <hr> <!-- la ligne continue -->
             </div>
             <!-- La colonne qui me fait galeré -->
-            <div class="">
+            <div style="width: 500px; height: 600px;" class="bg-danger">
                 [COLONNE DROITE]
             </div>
         </div>
     </section> <!-- Fin corps du site ( contenue generale )-->
+
+    
 
     <?php
     include("assets/PHP/pieddepage.php");
     ?>
 
 </body>
+
 </html>

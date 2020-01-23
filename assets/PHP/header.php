@@ -16,7 +16,7 @@
 
     <ul class="nav bg-dark">
         <li class="nav-item m-3">
-            <a href="index.php">Acceuil</a>
+            <a href="Accueil.php">Acceuil</a>
         </li>
         <li class="nav-item m-3">
             <a href="Tableau.php">Tableau</a>
@@ -26,5 +26,3 @@
         </li>
     </ul>
 
-    <img id="promo" src="assets/images/promotion.jpg" width="100%" alt="promotion"
-        title="promotion sur les lames de terrasse">
