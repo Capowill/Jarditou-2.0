@@ -98,3 +98,23 @@ document.getElementById("submit").addEventListener("click", testnom);
 document.getElementById("submit").addEventListener("click", testprenom);
 document.getElementById("submit").addEventListener("click", testcode);
 document.getElementById("submit").addEventListener("click", testmail);
+
+
+/*  PRIX  */ /* JS on appel les ID */
+function testprice() {
+    let filtre = /^(?!^0\.00$)(([1-9][\d]{0,6})|([0]))\.[\d]{2}$/;
+    let price = document.getElementById("prix").value;
+    let result = filtre.test(price);
+    let errorePrix = document.getElementById("errorPrice");
+    if (!result) {
+        event.preventDefault();
+        errorePrix.innerHTML = "Entrez un prix \n Exemple : 50.00";
+        errorePrix.style.color = "red";
+        prix.style.boxShadow = "0 0 5px 1px red";
+    } else {
+        errorePrix.innerHTML = "Champs valide";
+        errorePrix.style.color = "green";
+        price.style.color = "green";
+    }
+}
+document.getElementById("submit").addEventListener("click", testprice);

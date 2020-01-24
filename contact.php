@@ -16,6 +16,14 @@ include("assets/PHP/entete.php");
     <!-- FORMULAIRE -->
     <!--J'ai laisser GET car "POST" supprime la ligne nom a l'envoi du formulaire-->
     <form class="m-5" target="_blank" action="assets/PHP/repformulaire.php" method="POST">
+
+        <!-- teste prix -->
+        <div class="row">
+            <label class="col-2 m-2">Prix :</label><input type="text" class="col-2" id="prix" name="prix">
+            <span id="errorPrice" class="col-2">*</span>
+        </div>
+
+
         <div class="row">
             <label class="col-2 m-2">Votre nom :</label><input type="text" class="col-2" id="nom" name="nom">
             <span id="errorNom" class="col-2">*</span>
@@ -77,7 +85,8 @@ include("assets/PHP/entete.php");
     <?php
     include("assets/PHP/pieddepage.php");
     ?>
-    <!--  <script src="assets/fichier.js"></script>  -->
+    <script src="assets/fichier.js"></script>
 
 </body>
+
 </html>

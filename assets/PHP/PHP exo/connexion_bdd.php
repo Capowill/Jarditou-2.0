@@ -10,7 +10,7 @@ function connexionBase(){
     try 
     {
         $db = new PDO('mysql:host=' .$host. ';charset=utf8;dbname=' .$base, $login, $password);
-        echo "Vous êtes entrer dans la base de donnée ultra securisé de l'afpa";
+        echo "Vous êtes entrer dans la base de donnée ultra securisé de l'afpa <br>";
         return $db;
         } 
         catch (Exception $e) 
@@ -20,6 +20,5 @@ function connexionBase(){
             die('Connexion au serveur impossible.');
     }
 }
-connexionBase();
-
+connexionBase(); // appel de la fonction 
 ?>
