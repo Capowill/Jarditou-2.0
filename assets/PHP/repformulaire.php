@@ -17,8 +17,8 @@ echo"<br>";
 
 <?php
 /* Info formulaire coté serveur V1.0 */
-$prenom = $_POST['prenom'];  
-$nom = $_POST['nom'];
+$prenom = $_POST['Prenom'];  
+$nom = $_POST['Nom'];
 $adresse =$_POST['Adresse'];
 $ville  = $_POST['Ville'];
 $postal  = $_POST['Code'];

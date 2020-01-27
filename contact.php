@@ -16,45 +16,37 @@ include("assets/PHP/entete.php");
     <!-- FORMULAIRE -->
     <!--J'ai laisser GET car "POST" supprime la ligne nom a l'envoi du formulaire-->
     <form class="m-5" target="_blank" action="assets/PHP/repformulaire.php" method="POST">
-
-        <!-- teste prix -->
-        <div class="row">
-            <label class="col-2 m-2">Prix :</label><input type="text" class="col-2" id="prix" name="prix">
-            <span id="errorPrice" class="col-2">*</span>
-        </div>
-
-
-        <div class="row">
-            <label class="col-2 m-2">Votre nom :</label><input type="text" class="col-2" id="nom" name="nom">
+        <div class="row pb-3">
+            <label class="col-2 m-2">Votre nom :</label><input type="text" class="col-2 border rounded mb-2" id="Nom" name="Nom">
             <span id="errorNom" class="col-2">*</span>
         </div>
-        <div class="row">
-            <label class="col-2 m-2">Votre prénom :</label><input type="text" class="col-2" id="prenom" name="prenom">
+        <div class="row pb-3">
+            <label class="col-2 m-2">Votre prénom :</label><input type="text" class="col-2 border rounded mb-2" id="Prenom" name="Prenom">
             <span id="errorPrenom" class="col-2">*</span>
         </div>
-        <div class="row">
+        <div class="row pb-3">
             <label class="col-2 m-2"> Sexe :</label>
             <div class="col-2">
-                <input type="radio" name="sex" value="Féminin"> Féminin
-                <input type="radio" name="sex" value="Masculin"> Masculin
+                <input type="radio" name="sex" value="Féminin" required> Féminin
+                <input type="radio" name="sex" value="Masculin" required> Masculin
             </div>
         </div>
-        <div class="row">
-            <label class="col-2 m-2"> Date de naissance :</label><input type="date" class="col-2" id="naissance" name="Naissance" placeholder="01/02/1990">
+        <div class="row pb-3">
+            <label class="col-2 m-2"> Date de naissance :</label><input type="date" class="col-2 border rounded mb-2" id="Naissance" name="Naissance" placeholder="01/02/1990">
             <span id="errordate" class="col-2">*</span>
         </div>
-        <div class="row">
-            <label class="col-2 m-2"> Code postal :</label><input type="number" class="col-2" id="code" name="Code" placeholder="80100">
+        <div class="row pb-3">
+            <label class="col-2 m-2"> Code postal :</label><input type="number" class="col-2 border rounded mb-2" id="Code" name="Code" placeholder="80100">
             <span id="errorPostal" class="col-2">*</span>
         </div>
-        <div class="row">
-            <label class="col-2 m-2"> Adresse :</label></label><input type="text" class="col-2" id="adresse" name="Adresse">
+        <div class="row pb-3">
+            <label class="col-2 m-2"> Adresse :</label></label><input type="text" class="col-2 border rounded mb-2" id="adresse" name="Adresse">
         </div>
-        <div class="row">
-            <label class="col-2 m-2">Ville :</label></label><input type="text" class="col-2" id="ville" name="Ville">
+        <div class="row pb-3">
+            <label class="col-2 m-2">Ville :</label></label><input type="text" class="col-2 border rounded mb-2" id="ville" name="Ville">
         </div>
-        <div class="row">
-            <label class="col-2 m-2">E-mail :</label><input type="text" class="col-2" id="email" name="mail" placeholder="exemple@mail.fr">
+        <div class="row pb-3">
+            <label class="col-2 m-2">E-mail :</label><input type="text" class="col-2 border rounded mb-2" id="email" name="mail" placeholder="exemple@mail.fr">
             <span id="errorMail" class="col-2">*</span>
         </div>
         <div class="row">
@@ -72,7 +64,7 @@ include("assets/PHP/entete.php");
             <textarea name="commentaire" rows="7" cols="40"></textarea>
         </div>
         <div class="row m-5">
-            <input type="checkbox" name="Confirmation" value="Confirmation">J'accepte le traitement
+            <input type="checkbox" id="Confirmation" name="Confirmation" value="Confirmation">J'accepte le traitement
             informatique de ce formulaire.
         </div>
         <div class="row">
