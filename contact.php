@@ -7,6 +7,7 @@ include("assets/PHP/entete.php");
     include("assets/PHP/header.php");
     ?>
 
+
     <div class="m-5">
         <h1 class="mt-5 mb-3">Contact</h1>
         <hr>
@@ -76,8 +77,9 @@ include("assets/PHP/entete.php");
 
     <?php
     include("assets/PHP/pieddepage.php");
+    include("assets/PHP/fonction.php");
     ?>
-    <script src="assets/fichier.js"></script>
+ <!--   <script src="assets/fichier.js"></script> -->
 
 </body>
 

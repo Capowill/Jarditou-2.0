@@ -331,6 +331,7 @@ include("assets/PHP/entete.php");
     include("assets/PHP/pieddepage.php");
     ?>
 
+
 </body>
 
 </html>

@@ -140,8 +140,9 @@ else
 }
 echo $villeErr."<br>";
 
-// verif adresse mail ====== $mail = $_POST['mail'];
 
+
+// verif adresse mail ====== $mail = $_POST['mail'];
 if (empty($_POST["mail"]))
 {
     $mailErr = "Le mail est requis";
