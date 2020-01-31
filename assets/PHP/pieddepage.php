@@ -1,17 +1,17 @@
 <footer>
-    <!-- le bas de page avec les mentions BLBLBLBL -->
-    <ul class="nav bg-dark">
+    <!-- le bas de page avec les mentions  -->
+    <ul class="nav justify-content-center bg-dark">
         <li class="nav-item m-3">
-            <a href="">Mentions légales</a>
+            <a class="nav-link" href="">Mentions légales</a>
         </li>
         <li class="nav-item m-3">
-            <a href="">Horaires</a>
+            <a class="nav-link" href="">Horaires</a>
         </li>
         <li class="nav-item m-3">
-            <a href="">Plan du site</a>
+            <a class="nav-link" href="">Plan du site</a>
         </li>
     </ul>
-</footer> <!-- Fin des mentions BLBLBLBLBL-->
+</footer> <!-- Fin des mentions -->
 
 
 <!-- LE SCRIPT CEST TOUJOURS A LA FIN -->

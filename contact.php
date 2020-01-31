@@ -79,7 +79,7 @@ include("assets/PHP/entete.php");
     include("assets/PHP/pieddepage.php");
     include("assets/PHP/fonction.php");
     ?>
- <!--   <script src="assets/fichier.js"></script> -->
+    <!--   <script src="assets/fichier.js"></script> -->
 
 </body>
 
