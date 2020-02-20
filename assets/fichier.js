@@ -106,10 +106,10 @@ function testdate(){
     }
 }
 
-document.getElementById("submit").addEventListener("click", testdate)
-document.getElementById("submit").addEventListener("click", testnom)
+document.getElementById("submit").addEventListener("click", testdate);
+document.getElementById("submit").addEventListener("click", testnom);
 document.getElementById("submit").addEventListener("click", testprenom);
-document.getElementById("submit").addEventListener("click", testcode)
+document.getElementById("submit").addEventListener("click", testcode);
 document.getElementById("submit").addEventListener("click", testmail);
 
 

@@ -5,16 +5,15 @@ include("assets/PHP/header.php");
 include("assets/PHP/PHP_exo/connexion_bdd.php");
 // Appel de la fonction de connexion
 
-
 $db = connexionBase();
-$requete = "SELECT * FROM produits ORDER BY pro_id ASC";//Saisie de la requete
+// requet qui affiche les item du tableau dans l'ordre d'ajout (via les dates)
+$requete = "SELECT * FROM produits ORDER BY pro_d_ajout DESC";//Saisie de la requete
 $result = $db->query($requete);
-
 ?>
 <h1 class="d-flex justify-content-center display-3"><strong>Tableau</strong></h1>
     <hr>
 <h1 class="text-center mb-2 mt-2"> Liste des Articles</h1>
-
+<a href="produits_ajout.php"><button class="btn btn-secondary" type="submit" value="Envoyer">Ajouter un produit</button></a>
 <div class="table table-sm mb-1 mt-1"><!--rendre le table responsive pour une taille >=576px-->
     <!--class permet de changer de style du tableau (striped en zebra)-->
     <table class="table table-striped table-bordered">
@@ -24,6 +23,7 @@ $result = $db->query($requete);
             <th scope="col">ID</th>
             <th scope="col">Référence</th>
             <th scope="col">Libellé</th>
+            <th scope="col">Descriptions</th>
             <th scope="col">Prix</th>
             <th scope="col">Stock</th>
             <th scope="col">Couleur</th>
@@ -38,15 +38,16 @@ $result = $db->query($requete);
         <tbody>
         <tr>
             <th scope="row"><img src="assets/images/<?= $row->pro_id?>.<?=$row->pro_photo ?>" alt ="Photos" class="img-fluid" width="200" height="200"></th>
-            <td> <?= $row->pro_id ?> </td>
-            <td> <?= $row->pro_ref ?></td>
-            <td id="libelle"><a href="produits_ajout.php"><?= $row->pro_libelle?></a></td>
-            <td> <?= $row->pro_prix?> €</td>
-            <td> <?= $row->pro_stock ?></td>
-            <td> <?= $row->pro_couleur?> </td>
-            <td> <?= $row->pro_d_ajout?> </td>
-            <td> <?= $row->pro_d_modif?> </td>
-            <td> <?= $row->pro_bloque?> </td>
+            <td><?= $row->pro_id ?> </td>
+            <td><?= $row->pro_ref ?></td>
+            <td id="libelle"><a href="detail.php?pro_id=<?= $row->pro_id?>"><?= $row->pro_libelle?></a></td>
+            <td><?= $row->pro_description ?></td>  
+            <td><?= $row->pro_prix ?> €</td>
+            <td><?= $row->pro_stock ?></td>
+            <td><?= $row->pro_couleur ?></td>
+            <td><?= $row->pro_d_ajout ?></td>
+            <td><?= $row->pro_d_modif ?></td>
+            <td><?= $row->pro_bloque ?></td>
         </tr>
         </tbody>
 <?php } ?>
@@ -56,23 +57,4 @@ $result = $db->query($requete);
 
 <?php
 include("assets/PHP/pieddepage.php");
-
-
-// autre fonction verif
-
-// function verif1($result)
-// {
-//     if (!$result)
-//     {
-//         $tableauErreurs = $db->errorInfo();
-//         echo $tableauErreur[2];
-//         die("Erreur dans la requête");
-//     }
-//     if ($result->rowCount() == 0)
-//     {
-//         // Pas d'enregistrement
-//         die("La table est vide");
-//     }
-// }
-
 ?>

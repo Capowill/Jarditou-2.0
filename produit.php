@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>testDb.php</title>
 <?php
 
 //Pour faire une requet on fait ca : http://localhost/jarditou/produit.php?pro_id=8

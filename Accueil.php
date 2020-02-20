@@ -6,10 +6,10 @@ include("assets/PHP/entete.php");
     <?php
     include("assets/PHP/header.php");
     ?>
-    <section id="contener">
+    <section>
         <img id="promo" src="assets/images/promotion.jpg" width="100%" alt="promotion" title="promotion sur les lames de terrasse">
         <!-- corp du site ( contenue general ) blblbl -->
-        <div class="row">
+        <div class="d-flex flex-row">
             <div class="justify-content-between col-lg-7 col-xs-7 col-sm-7 m-5">
                 <h1>Acceuil</h1>
                 <hr> <!-- la ligne continue -->
@@ -43,8 +43,6 @@ include("assets/PHP/entete.php");
             </div>
         </div>
     </section> <!-- Fin corps du site ( contenue generale )-->
-
-    
 
     <?php
     include("assets/PHP/pieddepage.php");

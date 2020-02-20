@@ -1,4 +1,5 @@
 <?php
+// "CRUD" est un acronyme pour Create, Read, Update Delete 
 
 function connexionBase(){
        // Paramètre de connexion serveur
@@ -10,7 +11,6 @@ function connexionBase(){
     try 
     {
         $db = new PDO('mysql:host=' .$host. ';charset=utf8;dbname=' .$base, $login, $password);
-        echo "Vous êtes entrer dans la base de donnée ultra securisé de l'afpa <br>";
         return $db;
         } 
         catch (Exception $e) 

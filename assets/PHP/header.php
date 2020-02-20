@@ -1,7 +1,7 @@
 
 <!-- en tête du site -->
 <header>
-        <div class="row">
+        <div class="d-flex flex-row">
             <div class="col-xs-7 col-lg-7">
                 <img class="img-fluid" src="assets/images/jarditou_logo.jpg" alt="Logo Jarditou"
                     title="Logo Jarditou" />
@@ -19,7 +19,7 @@
             <a href="Accueil.php">Acceuil</a>
         </li>
         <li class="nav-item m-3">
-            <a href="Tableau.php">Tableau</a>
+            <a href="Newtableau.php">Tableau</a>
         </li>
         <li class="nav-item m-3">
             <a href="contact.php">Contact</a>

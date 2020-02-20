@@ -11,7 +11,7 @@
 	        <?php
             require "connexion_bdd.php"; // Inclusion de notre bibliothèque de fonctions
             $db = connexionBase(); // Appel de la fonction de connexion
-            $requete = "SELECT pro_id, pro_ref, pro_libelle FROM produits WHERE ISNULL(pro_bloque) ORDER BY pro_d_ajout DESC";
+            $requete = "SELECT pro_id, pro_ref, pro_libelle FROM produits ORDER BY pro_d_ajout DESC";
 
             $result = $db->query($requete);
 
