@@ -150,7 +150,7 @@ function verif_values()
             pro_d_modif='$date_modif', pro_bloque='$bloque'
             WHERE pro_id='$pro_id'");
         $requete->execute();
-       // header('Location:Newtableau.php');
+        header('Location:Newtableau.php');
     }
     catch(PDOException $e){
         echo 'Erreur : '.$e->getMessage();

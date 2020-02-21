@@ -50,7 +50,7 @@ $produit = $result->fetch(PDO::FETCH_OBJ);
     </table>
 </div>
 <a class="btn btn-info mb-2" href="Formulaire_modif.php?pro_id=<?php echo $produit->pro_id; ?>" role="button">Modifier</a>
-<a class="btn btn-danger mb-2" href="produit_supprimer.php?pro_id=<?php echo $produit->pro_id; ?>" role="button">supprimer</a>
+<a class="btn btn-danger mb-2" href="supprimer_produit.php?pro_id=<?php echo $produit->pro_id; ?>" role="button">supprimer</a>
 
 
 <?php
