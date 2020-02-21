@@ -19,17 +19,17 @@ $result = $db->query($requete);
     <table class="table table-striped table-bordered">
         <thead>
         <tr id="titre">
-            <th scope="col" width="20%">Photos</th>
-            <th scope="col">ID</th>
-            <th scope="col">Référence</th>
-            <th scope="col">Libellé</th>
-            <th scope="col">Descriptions</th>
-            <th scope="col">Prix</th>
-            <th scope="col">Stock</th>
-            <th scope="col">Couleur</th>
-            <th scope="col">Ajout</th>
-            <th scope="col">Modif</th>
-            <th scope="col">Bloqué</th>
+            <th width="20%">Photos</th>
+            <th>ID</th>
+            <th>Référence</th>
+            <th>Libellé</th>
+            <th>Descriptions</th>
+            <th>Prix</th>
+            <th>Stock</th>
+            <th>Couleur</th>
+            <th>Ajout</th>
+            <th>Modif</th>
+            <th>Bloqué</th>
         </tr>
         </thead>
 

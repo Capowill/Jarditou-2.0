@@ -15,7 +15,6 @@ include("assets/PHP/entete.php");
     </div>
 
     <!-- FORMULAIRE -->
-    <!--J'ai laisser GET car "POST" supprime la ligne nom a l'envoi du formulaire-->
     <form class="m-5" target="_blank" action="assets/PHP/repformulaire.php" method="POST">
         <div class="row pb-3">
             <label class="col-2 m-2">Votre nom :</label><input type="text" class="col-2 border rounded mb-2" id="Nom" name="Nom">
@@ -28,8 +27,8 @@ include("assets/PHP/entete.php");
         <div class="row pb-3">
             <label class="col-2 m-2"> Sexe :</label>
             <div class="col-2">
-                <input type="radio" name="sex" value="Féminin" required> Féminin
-                <input type="radio" name="sex" value="Masculin" required> Masculin
+                <input type="radio" name="sex" value="Féminin" > Féminin
+                <input type="radio" name="sex" value="Masculin" > Masculin
             </div>
         </div>
         <div class="row pb-3">
@@ -70,7 +69,7 @@ include("assets/PHP/entete.php");
         </div>
         <div class="row">
             <button class="btn btn-primary" type="submit" value="Envoyer" id="submit">Envoyer</button>
-            <button class="btn btn-primary" type="reset" value="Annuler">Annuler</button>
+            <button class="btn btn-secondary" type="reset" value="Annuler">Annuler</button>
         </div>
     </form>
 
@@ -79,7 +78,7 @@ include("assets/PHP/entete.php");
     include("assets/PHP/pieddepage.php");
     include("assets/PHP/fonction.php");
     ?>
-    <!--   <script src="assets/fichier.js"></script> -->
+    <!-- <script src="assets/fichier.js"></script> -->
 
 </body>
 
