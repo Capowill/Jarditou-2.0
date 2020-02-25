@@ -5,6 +5,7 @@ function ckeck_values($donnees){ // this function will check each values send by
     $donnees = htmlspecialchars($donnees); // Convert special characters into HTML entities
     return $donnees;
 }
+include ('upload_image.php');
 function verif_values(){ //this function will verify required values and syntax.
     
     $pro_id = ckeck_values($_POST['pro_id']);
@@ -15,7 +16,7 @@ function verif_values(){ //this function will verify required values and syntax.
     $pro_prix = ckeck_values($_POST['pro_prix']);
     $pro_stock = ckeck_values($_POST['pro_stock']);
     $couleur = ckeck_values($_POST['couleur']);
-    $photo = ckeck_values($_POST['photo']);
+    $photo = ckeck_values($_POST['photo']);//
     $date_ajout = ckeck_values($_POST['date_ajout']);
     $bloque = ckeck_values($_POST['bloque']);
     
@@ -65,7 +66,7 @@ function verif_values(){ //this function will verify required values and syntax.
         {
             echo $error_pro_ref = "Veuillez renseigner ce champs";
         }else if (!preg_match($alpha1, $pro_ref)){
-            echo $error_pro_ref = "La référence doit se composer uniquement de lettres, chiffres, tirets et underscores (_)";
+            echo $error_pro_ref = "La référence doit se composer uniquement de lettres, chiffres, tirets et underscores (_) <br>";
         }else{
             echo $error_pro_ref = "Validé : ";
             echo "Référence du produit = $pro_ref <br>";
@@ -145,7 +146,7 @@ function verif_values(){ //this function will verify required values and syntax.
             echo $error_date_ajout = "La date d'ajout ne correspond pas à la date d'aujourd'hui ";
         }else{
             echo $error_date_ajout = "Validé : ";
-            echo "Extension de la photo = $date_ajout <br>";
+            echo "date d'ajout = $date_ajout <br>";
         }
 
         // Vérification du bloquage ou non du produit
@@ -156,11 +157,10 @@ function verif_values(){ //this function will verify required values and syntax.
             echo $error_bloque = "La catégorie doit se composer que des chiffres ";
         }else{
             echo $error_bloque = "Validé : ";
-            echo "Extension de la photo = $bloque <br>";
+            echo "bloqué = $bloque <br>";
         }
     }
 
-    var_dump($_POST);
     try
     {
         require "assets/PHP/PHP_exo/connexion_bdd.php";
@@ -179,14 +179,14 @@ function verif_values(){ //this function will verify required values and syntax.
         $requete->bindParam(':pro_d_ajout', $date_ajout);
         $requete->bindParam(':pro_bloque', $bloque);
         $requete->execute();
-     //   header('Location:Newtableau.php');
+        header('Location:Newtableau.php');
     }
     catch(PDOException $e){
         echo 'Erreur : '.$e->getMessage();
     }
+    verif_img();
 }
 verif_values();
-
 ?>
 
 

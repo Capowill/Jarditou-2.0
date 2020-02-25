@@ -36,7 +36,7 @@ $produit = $result->fetch(PDO::FETCH_OBJ);
         </thead>
 
         <tbody>
-            <td><img src="assets/images/<?= $produit->pro_id ?>.<?= $produit->pro_photo ?>" alt="Photos" class="img-fluid" width="200" height="200"></td>
+            <td width="200px" height="200px"><img src="assets/images/<?= $produit->pro_id ?>.<?= $produit->pro_photo ?>" alt="Photos" class="img-fluid" width="200px" height="200px"></td>
             <td><?= $produit->pro_id ?> </td>
             <td><?= $produit->pro_cat_id ?> </td>
             <td><?= $produit->pro_ref ?></td>
@@ -48,83 +48,87 @@ $produit = $result->fetch(PDO::FETCH_OBJ);
             <td><?= $produit->pro_d_ajout ?></td>
             <td><?= $produit->pro_d_modif ?></td>
             <td><?= $produit->pro_bloque ?></td>
-            
+
         </tbody>
     </table>
 </div>
 
-<form class="m-5" action="script_modif.php" method="POST">
-            <div class="form-group row mt-2">
-                <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">ID produits : *</label>
-                <div class="col-lg-3 col-md-4">
-                    <input type="text" class="form-control" name='pro_id' id="pro_id" value='<?= $produit->pro_id ?>'>
-                    <span id="error_pro_id"></span>
-                </div>
-                <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Catégorie du produit : *</label>
-                <div class="col-lg-3 col-md-4">
-                    <input type="text" class="form-control" name="pro_cat_id" id="pro_cat_id" value='<?= $produit->pro_cat_id ?>'>
-                    <span id="error_pro_cat"></span>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Référence produit : *</label>
-                <div class="col-lg-3 col-md-4">
-                    <input type="text" class="form-control" name="pro_ref" id="pro_ref" value='<?= $produit->pro_ref ?>'>
-                    <span id="error_pro_ref"></span>
-                </div>
-                <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Nom du produit (libellé) : *</label>
-                <div class="col-lg-3 col-md-4">
-                    <input type="text" class="form-control" name="pro_libelle" id="pro_libelle" value="<?= $produit->pro_libelle ?>">
-                    <span id="error_pro_libelle"></span>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Description du produit : *</label>
-                <div class="col-lg-3 col-md-4">
-                    <textarea class="form-control" name="pro_description" id="pro_description" rows="4"><?= $produit->pro_description ?></textarea>
-                    <span id="error_pro_description"></span>
-                </div>
-                <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Prix : *</label>
-                <div class="col-lg-3 col-md-4">
-                    <input type="text" class="form-control" name="pro_prix" id="pro_prix" value="<?= $produit->pro_prix; ?>">
-                    <span id="error_pro_prix"></span>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Nombre d'unité en stock : *</label>
-                <div class="col-lg-3 col-md-4">
-                    <input type="text" class="form-control" name="pro_stock" id="pro_stock" value="<?= $produit->pro_stock ?>">
-                    <span id="error_pro_stock"></span>
-                </div>
-                <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Couleur : *</label>
-                <div class="col-lg-3 col-md-4">
-                    <input type="text" class="form-control" name="couleur" id="couleur" value="<?= $produit->pro_couleur ?>">
-                    <span id="error_couleur"></span>
-                </div>
-            </div>
-            <!-- <div class="form-group row">
-                <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Extension de la photo : *</label>
-                <div class="col-lg-3 col-md-4">
-                    <input type="text" class="form-control" name="photo" id="photo" placeholder="Ex: jpg, png, ...">
-                    <span id="error_photo"></span>
-                </div>             -->
-            </div>
-            <div class="form-group row">
-                <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Date de modification : *</label>
-                <div class="col-lg-3 col-md-4">
-                    <input type="date" class="form-control" name="date_modif" id="date_modif" value="<?= $produit->pro_d_modif ?>">
-                    <span id="error_date_modif"></span>
-                </div>
-                <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Bloquer le produit à la vente : *</label>
-                <div class="col-lg-3 col-md-4">
-                    <input type="text" class="form-control" name="bloque" id="bloque" value="<?= $produit->pro_bloque ?>">
-                    <span id="error_bloque"></span>
-                </div>
-            </div>
-        
-        
-<button class="btn btn-info mb-2" type="submit" >Modifier</button>
-<a class="btn btn-secondary mb-2" href="Newtableau.php" type="reset" role="button">Annuler</a>
+<form class="m-5" action="script_modif.php" method="POST"  enctype="multipart/form-data">
+    <div class="form-group row mt-2">
+        <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">ID produits : *</label>
+        <div class="col-lg-3 col-md-4">
+            <input type="text" class="form-control" name='pro_id' id="pro_id" value='<?= $produit->pro_id ?>'>
+            <span id="error_pro_id"></span>
+        </div>
+        <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Catégorie du produit : *</label>
+        <div class="col-lg-3 col-md-4">
+            <input type="text" class="form-control" name="pro_cat_id" id="pro_cat_id" value='<?= $produit->pro_cat_id ?>'>
+            <span id="error_pro_cat"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Référence produit : *</label>
+        <div class="col-lg-3 col-md-4">
+            <input type="text" class="form-control" name="pro_ref" id="pro_ref" value='<?= $produit->pro_ref ?>'>
+            <span id="error_pro_ref"></span>
+        </div>
+        <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Nom du produit (libellé) : *</label>
+        <div class="col-lg-3 col-md-4">
+            <input type="text" class="form-control" name="pro_libelle" id="pro_libelle" value="<?= $produit->pro_libelle ?>">
+            <span id="error_pro_libelle"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Description du produit : *</label>
+        <div class="col-lg-3 col-md-4">
+            <textarea class="form-control" name="pro_description" id="pro_description" rows="4"><?= $produit->pro_description ?></textarea>
+            <span id="error_pro_description"></span>
+        </div>
+        <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Prix : *</label>
+        <div class="col-lg-3 col-md-4">
+            <input type="text" class="form-control" name="pro_prix" id="pro_prix" value="<?= $produit->pro_prix; ?>">
+            <span id="error_pro_prix"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Nombre d'unité en stock : *</label>
+        <div class="col-lg-3 col-md-4">
+            <input type="text" class="form-control" name="pro_stock" id="pro_stock" value="<?= $produit->pro_stock ?>">
+            <span id="error_pro_stock"></span>
+        </div>
+        <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Couleur : *</label>
+        <div class="col-lg-3 col-md-4">
+            <input type="text" class="form-control" name="couleur" id="couleur" value="<?= $produit->pro_couleur ?>">
+            <span id="error_couleur"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Date de modification : *</label>
+        <div class="col-lg-3 col-md-4">
+            <input type="date" class="form-control" name="date_modif" id="date_modif" value="<?= $produit->pro_d_modif ?>">
+            <span id="error_date_modif"></span>
+        </div>
+        <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Bloquer le produit à la vente : *</label>
+        <div class="col-lg-3 col-md-4">
+            <input type="text" class="form-control" name="bloque" id="bloque" value="<?= $produit->pro_bloque ?>">
+            <span id="error_bloque"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Photo : *</label>
+        <div class="col-lg-3 col-md-4">
+            <input type="file" class="form-control-file" name="fichier" id="fichier">
+        </div>
+        <label id="colFormLabel" class="col-lg-3 col-md-2 col-form-label ">Extension de la photo : *</label>
+        <div class="col-lg-3 col-md-4">
+            <input type="text" class="form-control" name="photo" id="photo" placeholder="Ex: jpg, png, ...">
+            <span id="error_photo"></span>
+        </div>
+    </div>
+
+
+    <button class="btn btn-info mb-2" type="submit" name="submit">Modifier</button>
+    <a class="btn btn-secondary mb-2" href="Newtableau.php" type="reset" role="button">Annuler</a>
 </form>
 
 

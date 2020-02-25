@@ -23,27 +23,29 @@ $produit = $result->fetch(PDO::FETCH_OBJ);
                 <th scope="col">ID</th>
                 <th scope="col">Référence</th>
                 <th scope="col">Libellé</th>
+                <th scope="col">Description</th>
                 <th scope="col">Prix</th>
                 <th scope="col">Stock</th>
                 <th scope="col">Couleur</th>
-                <th scope="col">Ajout</th>
-                <th scope="col">Modif</th>
+                <th scope="col">Date modif</th>
+                <th scope="col">Date ajout</th>
                 <th scope="col">Bloqué</th>
+
             </tr>
         </thead>
 
         <tbody>
-            <td><img src="assets/images/<?= $produit->pro_id ?>.<?= $produit->pro_photo ?>" alt="Photos" class="img-fluid" width="200" height="200"></td>
+            <td><img src="assets/images/<?= $produit->pro_id ?>.<?= $produit->pro_photo ?>" alt="Photos" class="img" width="200" height="200"></td>
             <td><?= $produit->pro_id ?> </td>
             <td><?= $produit->pro_ref; ?></td>
             <td><?= $produit->pro_libelle; ?></td>
+            <td width="500px" height="200px"><?php echo $produit->pro_description; ?></td>
             <td><?= $produit->pro_prix; ?>€</td>
             <td><?= $produit->pro_stock ?></td>
             <td><?= $produit->pro_couleur ?></td>
-            <td><?= $produit->pro_d_ajout ?></td>
-            <td><?= $produit->pro_d_modif ?></td>
+            <td width="200px" height="200px"><?= $produit->pro_d_ajout ?></td>
+            <td width="200px" height="200px"><?= $produit->pro_d_modif ?></td>
             <td><?= $produit->pro_bloque ?></td>
-            <!-- <td><?php echo $produit->pro_description; ?></td> -->
 
         </tbody>
 
