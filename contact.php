@@ -76,7 +76,7 @@ include("assets/PHP/entete.php");
 
     <?php
     include("assets/PHP/pieddepage.php");
-    include("assets/PHP/fonction.php");
+    //include("assets/PHP/fonction.php");
     ?>
     <!-- <script src="assets/fichier.js"></script> -->
 

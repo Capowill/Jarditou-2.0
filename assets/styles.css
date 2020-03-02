@@ -3,19 +3,16 @@
 
 /* CSS du formulaire */
 
-span{
-color: red;
-}
-
-h5{
+span {
     color: red;
 }
 
-label{
-    font-weight: bold; /*met en gras*/
+h5 {
+    color: red;
 }
 
-/* teste modif police du texte 
-body{
-    font-family: Marker Felt, fantasy;
-}*/
+label {
+    font-weight: bold;
+    /*met en gras*/
+}
+

@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="assets/styles.css"> <!-- css simple -->
+    <link rel="stylesheet" href="assets/styles.css"> <!-- css simple fait main -->
 
     <title>jarditou</title>
 </head>

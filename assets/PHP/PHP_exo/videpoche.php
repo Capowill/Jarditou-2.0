@@ -1,84 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
 
-<?php
+<head>
+    <!-- tête du document , referencer le css /  -->
+    <meta charset="UTF-8"> <!-- permet de voir les accents -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="assets/styles.css"> <!-- css simple -->
 
-if (isset($_GET["erreur1"]))
-{
-    ?>
-    <div class = "alert alert-danger" >Le champ nom n'est pas renseigné</div>
-    <?php
-}
-else if (isset($_GET["erreur1b"]))
-{
-    ?>
-    <div class = "alert alert-warning" >Le format de votre nom n'est pas correct</div>
-    <?php
-}
-
-?>
+    <title>jarditou</title>
+</head>
 
 
-<?php
-if(empty ($_POST["nom"]))
-{
-$aErreur[] = "erreur1=true";
-}
-else if(!preg_match("/^[A-zA-ZñéèîïÉÈÎÏ][A-zA-Zñéèêàçîï]+([-'\s][A-zA-ZñéèîïÉÈÎÏ][A-zA-Zñéèêàçîï]+)?$/",($_POST["nom"])))
-{
-$aErreur[] = "erreur1b=true";
-}
-else
-{
-echo "Nom : ". $_POST["nom"] . "<br>";
-}
-?>
 
 
-<!-- ===================================================================== -->
-<!-- ===================================================================== -->
-<!-- ===================================================================== -->
-<form method="POST" enctype="multipart/form-data">
-    <input type="file" name="upload_file" />
-    <input type="submit" name="submit">
-</form>
-<?php
-if(isset($_POST['submit']))
-{
-    $maxSize = 50000; 
-    $validExt = array ('.jpg','jpeg','.gif','.png');
 
-    if($_FILES['uploaded_file']['error'] > 0)
-    {
-        Echo "Erreur";
-        die;
-    }
 
-    $fileSize = $_FILES['uploead_file']['size'];
+<body>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCentered">
+    Supprimer
+</button>
 
-    if($fileSize > $maxSize)
-    {
-        Echo "Fichier trop gros ";
-        die;
-    }
+<!-- Modal -->
+<div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenteredLabel">Vous êtes sur le point de supprimer l'item : </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-danger">Supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 
-    $fileName = $_FILES['uploaded_file']['name'];
-    $fileExt = ".". strtolower(substr(strrchr($fileName, '.'), 1));
 
-    if(!in_array($fileExt, $validExt))
-    {
-        Echo "Le fichier n'est pas une image";
-        die;
-    }
 
-    $tmpName = $_FILES['uploead_file']['tmp_name'];
-//    $uniqueName = md5(uniqid(rand(), true));
-    $fileName = "upload/" . $uniqueName . $fileExt;
-    $resultat = move_uploaded_file($tmpName, $fileName);
 
-    if($resultat)
-    {
-        echo " Transfert ok !";
-    }
-}
-?>
 
+<!-- LE SCRIPT CEST TOUJOURS A LA FIN -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>

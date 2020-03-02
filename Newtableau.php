@@ -19,10 +19,10 @@ $result = $db->query($requete);
     <table class="table table-striped table-bordered">
         <thead>
         <tr id="titre">
-            <th width="20%">Photos</th>
+            <th width="auto">Photos</th>
             <th>ID</th>
             <th>Référence</th>
-            <th>Libellé</th>
+            <th>Nom produits</th>
             <th>Descriptions</th>
             <th>Prix</th>
             <th>Stock</th>
@@ -37,16 +37,16 @@ $result = $db->query($requete);
     { ?>
         <tbody>
         <tr>
-            <th scope="row"><img src="assets/images/<?= $row->pro_id?>.<?=$row->pro_photo ?>" alt ="Photos" class="img-fluid" width="200" height="200"></th>
+            <th width="200" height="200"><img src="assets/images/<?= $row->pro_id?>.<?=$row->pro_photo ?>" alt ="Photos" class="img-fluid" width="200" height="200"></th>
             <td><?= $row->pro_id ?> </td>
             <td><?= $row->pro_ref ?></td>
-            <td id="libelle"><a href="detail.php?pro_id=<?= $row->pro_id?>"><?= $row->pro_libelle?></a></td>
+            <td width="150" id="libelle"><a href="detail.php?pro_id=<?= $row->pro_id?>"><?= $row->pro_libelle?></a></td> 
             <td><?= $row->pro_description ?></td>  
-            <td><?= $row->pro_prix ?> €</td>
+            <td width="100"><?= $row->pro_prix ?> €</td>
             <td><?= $row->pro_stock ?></td>
             <td><?= $row->pro_couleur ?></td>
-            <td><?= $row->pro_d_ajout ?></td>
-            <td><?= $row->pro_d_modif ?></td>
+            <td width="150"><?= $row->pro_d_ajout ?></td>
+            <td width="150"><?= $row->pro_d_modif ?></td>
             <td><?= $row->pro_bloque ?></td>
         </tr>
         </tbody>

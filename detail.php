@@ -22,7 +22,7 @@ $produit = $result->fetch(PDO::FETCH_OBJ);
                 <th scope="col" width="20%">Photos</th>
                 <th scope="col">ID</th>
                 <th scope="col">Référence</th>
-                <th scope="col">Libellé</th>
+                <th scope="col">Nom produits</th>
                 <th scope="col">Description</th>
                 <th scope="col">Prix</th>
                 <th scope="col">Stock</th>
@@ -51,8 +51,39 @@ $produit = $result->fetch(PDO::FETCH_OBJ);
 
     </table>
 </div>
-<a class="btn btn-info mb-2" href="Formulaire_modif.php?pro_id=<?php echo $produit->pro_id; ?>" role="button">Modifier</a>
-<a class="btn btn-danger mb-2" href="supprimer_produit.php?pro_id=<?php echo $produit->pro_id; ?>" role="button">supprimer</a>
+
+
+<a class="btn btn-primary mb-2" href="Formulaire_modif.php?pro_id=<?php echo $produit->pro_id; ?>" role="button">Modifier</a>
+<a class="btn btn-secondary mb-2" href="Newtableau.php" type="reset" role="button">Annuler</a>
+<button type="button" class="btn btn-danger mb-2" data-toggle="modal" data-target="#exampleModalCentered">
+    Supprimer
+</button>
+
+
+
+<!-- ============ ============ ============ ============ ============ ============ ============  -->
+<!-- Interrieur du modal 'click'->(Supprimer) ca ouvre :  -->
+<div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" id="monModal">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenteredLabel">Vous êtes sur le point de supprimer l'item : </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <strong><?= $produit->pro_libelle; ?></strong>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <a class="btn btn-danger" href="supprimer_produit.php?pro_id=<?php echo $produit->pro_id; ?>" role="button">supprimer</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============ ============ ============ ============ ============ ============ ============  -->
+
 
 
 <?php
