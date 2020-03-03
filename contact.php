@@ -27,8 +27,8 @@ include("assets/PHP/entete.php");
         <div class="row pb-3">
             <label class="col-2 m-2"> Sexe :</label>
             <div class="col-2">
-                <input type="radio" name="sex" value="Féminin" > Féminin
-                <input type="radio" name="sex" value="Masculin" > Masculin
+                <input type="radio" name="sex" value="Féminin"> Féminin
+                <input type="radio" name="sex" value="Masculin"> Masculin
             </div>
         </div>
         <div class="row pb-3">
