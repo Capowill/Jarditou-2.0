@@ -328,6 +328,7 @@ include("assets/PHP/entete.php");
     <hr>
 
     <?php
+    include('assets/PHP/footer.php');
     include("assets/PHP/pieddepage.php");
     ?>
 

@@ -1,28 +1,22 @@
-
 <!-- en tête du site -->
 <header>
-        <div class="d-flex flex-row">
-            <div class="col-xs-7 col-lg-7">
-                <img class="img-fluid" src="assets/images/jarditou_logo.jpg" alt="Logo Jarditou"
-                    title="Logo Jarditou" />
-            </div>
-            <div class="col-xs-5 col-lg-5">
-                <p class="display-3 m-5"> <strong>Tout le jardin</strong></p>
-            </div>
+    <div class="d-flex flex-row">
+        <div class="col-xs-7 col-lg-7">
+            <img class="img-fluid" src="assets/images/jarditou_logo.jpg" alt="Logo Jarditou" title="Logo Jarditou" />
         </div>
-        <p class="m-3"><strong>La qualité depuis 70 ans</strong></p>
-    </header>
-    <!-- fin de en tête du site -->
+        <div class="col-xs-5 col-lg-5">
+            <p class="display-3 m-5 d-lg-block d-xl-block d-sm-block d-none"> <strong>Tout le jardin</strong></p>
+        </div>
+    </div>
+    <p class="m-3 d-lg-block d-xl-block d-sm-block d-none"><strong>La qualité depuis 70 ans</strong></p>
+</header>
+<!-- fin de en tête du site -->
 
-    <ul class="nav bg-dark">
-        <li class="nav-item m-3">
-            <a href="Accueil.php">Acceuil</a>
-        </li>
-        <li class="nav-item m-3">
-            <a href="Newtableau.php">Tableau</a>
-        </li>
-        <li class="nav-item m-3">
-            <a href="contact.php">Contact</a>
-        </li>
-    </ul>
+<nav class="nav bg-dark d-flex justify-content-center">
 
+    <a type="button" class="btn btn-dark m-2" href="Accueil.php">Accueil</a> 
+    <a type="button" class="btn btn-dark m-2" href="Newtableau.php">Tableau</a>
+    <a type="button" class="btn btn-dark m-2" href="contact.php">Contact</a>
+    <a type="button" class="btn btn-dark m-2" href="Form_inscription.php">S'enregistrer</a>
+
+</nav>

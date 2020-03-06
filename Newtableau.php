@@ -56,5 +56,6 @@ $result = $db->query($requete);
 </div>
 
 <?php
-include("assets/PHP/pieddepage.php");
+    include('assets/PHP/footer.php');
+    include("assets/PHP/pieddepage.php");
 ?>

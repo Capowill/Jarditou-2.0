@@ -38,16 +38,40 @@ include("assets/PHP/entete.php");
                     <hr> <!-- la ligne continue -->
             </div>
             <!-- La colonne qui me fait galeré -->
-            <div style="width: 500px; height: 600px;" class="bg-danger">
-                [COLONNE DROITE]
+            <!-- dans la colonne j'ai implanté une card avec la conexion au site -->
+            <div style="width: 500px; height:auto;" class=" mt-5 d-none d-md-block d-lg-block d-xl-block">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Déjà Enregistrer ?</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">Connectez-vous d'ici </h6>
+                        <form action="assets/PHP/repformulaire.php" method="POST">
+                            <!--  -->
+                            <div class="input-group mb-2 mr-sm-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Pseudo :</div>
+                                </div>
+                                <input type="text" class="form-control" id="Pseudo" placeholder="Pseudo">
+                            </div>
+                            <!--  -->
+                            <div class="input-group mb-2 mr-sm-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Password :</div>
+                                </div>
+                                <input type="text" class="form-control" id="Password" placeholder="Password">
+                            </div>
+                            <!--  -->
+                            <div class="d-flex justify-content-end">
+                                <a href="#" class="btn btn-primary btn-lg mr-2" role="button"><b>Connexion</b></a>
+                                <a href="Form_inscription.php" type="button" class="btn btn-lg btn-secondary"><b>Non</b></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section> <!-- Fin corps du site ( contenue generale )-->
 
     <?php
+    include('assets/PHP/footer.php');
     include("assets/PHP/pieddepage.php");
     ?>
-
-</body>
-
-</html>

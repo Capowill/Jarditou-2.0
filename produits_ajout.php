@@ -106,6 +106,7 @@ connexionBase(); // appel de la fonction
     </form>
 
     <?php
+    include('assets/PHP/footer.php');
     include("assets/PHP/pieddepage.php");
     ?>
 

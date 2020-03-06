@@ -133,5 +133,6 @@ $produit = $result->fetch(PDO::FETCH_OBJ);
 
 
 <?php
-include('assets/PHP/pieddepage.php');
+    include('assets/PHP/footer.php');
+    include('assets/PHP/pieddepage.php');
 ?>

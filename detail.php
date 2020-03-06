@@ -73,7 +73,7 @@ $produit = $result->fetch(PDO::FETCH_OBJ);
                 </button>
             </div>
             <div class="modal-body">
-            <strong><?= $produit->pro_libelle; ?></strong>
+                <strong><?= $produit->pro_libelle; ?></strong>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
@@ -87,5 +87,6 @@ $produit = $result->fetch(PDO::FETCH_OBJ);
 
 
 <?php
-include('assets/PHP/pieddepage.php');
+    include('assets/PHP/footer.php');
+    include('assets/PHP/pieddepage.php');
 ?>
