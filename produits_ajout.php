@@ -101,7 +101,7 @@ connexionBase(); // appel de la fonction
                     <span id="error_date_ajout"></span>
                 </div>
         </div>
-        <button type="submit" class="btn btn-primary mb-2" name="submit" value="envoiContact">Envoyer</button>
+        <button type="submit" class="btn btn-primary mb-2" name="submit" value="envoiProduit">Envoyer</button>
         <a class="btn btn-secondary mb-2" href="Newtableau.php" role="button">Annuler</a>
     </form>
 

@@ -44,7 +44,7 @@ include("assets/PHP/entete.php");
                     <div class="card-body">
                         <h4 class="card-title">Déjà Enregistrer ?</h4>
                         <h6 class="card-subtitle mb-2 text-muted">Connectez-vous d'ici </h6>
-                        <form action="assets/PHP/repformulaire.php" method="POST">
+                        <form action="assets/PHP/co_log.php" method="POST">
                             <!--  -->
                             <div class="input-group mb-2 mr-sm-2">
                                 <div class="input-group-prepend">
@@ -57,7 +57,7 @@ include("assets/PHP/entete.php");
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">Password :</div>
                                 </div>
-                                <input type="text" class="form-control" id="Password" placeholder="Password">
+                                <input type="text" class="form-control" id="Pass" placeholder="Password">
                             </div>
                             <!--  -->
                             <div class="d-flex justify-content-end">
