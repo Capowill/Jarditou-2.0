@@ -7,7 +7,7 @@ function ckeck_values($donnees){ // this function will check each values send by
     return $donnees;
 }
 
-//Table `user` = id_users	pseudo	password	email	nom	prenom	adresse	ville	codepostal	dateinscription	datevisite	
+//Table `users` = id_users	pseudo	password	email	nom	prenom	adresse	ville	codepostal	dateinscription	datevisite	
 function verif_inscription(){
     $pseudo = ckeck_values($_POST['Pseudo']);
     $password = ckeck_values($_POST['Pass']);
@@ -19,7 +19,7 @@ function verif_inscription(){
     $ville = ckeck_values($_POST['Ville']);
     $postal = ckeck_values($_POST['Postal']);
 
-var_dump($_POST);
+//var_dump($_POST);
 echo "<br>";
     $filtreMail = "/^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$/";
     $filtrePostal = "/^[0-9]{5}$/";
@@ -96,7 +96,7 @@ if (empty($pseudo)){
     }
 
 //Table `user` = id_users	us_pseudo	us_password	us_email	us_nom	us_prenom	us_adresse	us_ville	us_codepostal	dateinscription	datevisite		
-
+//  us_pseudo	us_email	us_password	us_nom	us_adresse	us_ville	us_codepostal
     try {
         require "assets/PHP/PHP_exo/connexion_bdd.php";
         $db = connexionBase();
@@ -118,8 +118,5 @@ if (empty($pseudo)){
     }
 }
 verif_inscription();
-
-
-
 
 ?>

@@ -20,5 +20,5 @@ function connexionBase(){
             die('Connexion au serveur impossible.');
     }
 }
-connexionBase(); // appel de la fonction 
+//connexionBase(); // appel de la fonction 
 ?>

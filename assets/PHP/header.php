@@ -1,3 +1,10 @@
+<?php
+        require 'PHP_exo/connexion_bdd.php';
+        require 'PHP_exo/utile.php';
+        init_php_session();
+
+?>
+
 <!-- en tête du site -->
 <header>
     <div class="d-flex flex-row">
@@ -19,4 +26,9 @@
     <a type="button" class="btn btn-dark m-2" href="contact.php">Contact</a>
     <a type="button" class="btn btn-dark m-2" href="Form_inscription.php">S'enregistrer</a>
 
+    <?php
+        if(is_logged()){
+            echo '<form action="assets/PHP/co_log.php" method="GET"><button type="submit" class="btn btn-dark" name="logout" id="logout" value="logout"><b>Logout</b></button></form>';
+        }
+    ?>
 </nav>

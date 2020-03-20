@@ -2,7 +2,6 @@
 include("assets/PHP/entete.php");
 include("assets/PHP/header.php");
 // Inclusion de notre bibliothèque de fonctions
-include("assets/PHP/PHP_exo/connexion_bdd.php");
 // Appel de la fonction de connexion
 
 $db = connexionBase();

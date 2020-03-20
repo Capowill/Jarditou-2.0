@@ -41,7 +41,6 @@ include('assets/PHP/header.php');
                     <div class="row pb-3">
                         <label class="col-5 ">Ville :</label><input type="text" class="col-7 border rounded mb-2" id="Ville" name="Ville">
                     </div>
-
                     <button type="submit" class="btn btn-primary" value="EnvoiInscription"><b>Valider</b></button>
                     <a href="Accueil.php" type="button" class="btn btn-secondary"><b>Annuler</b></a>
                 </form>

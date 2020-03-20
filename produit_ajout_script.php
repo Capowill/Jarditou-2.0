@@ -25,7 +25,7 @@ function verif_values(){ //this function will verify required values and syntax.
     //REGEX LIST
     $num1 ="/^[0-9]{1,10}$/"; //For pro_id & pro_cat_id int(10)
     $num2 ="/^[0-9]{1,6}(.[0-9]{0,2})$/"; //For pro_prix decimal(6,2)
-    $num3 ="/^[0-9]{1,11}$/"; //FOr pro_stock int(11)
+    $num3 ="/^[0-9]{1,11}$/"; //For pro_stock int(11)
     $num4 ="/^[0-9]{1}$/"; //For pro_bloque tinyint(1)
     $alpha1 ="/^[a-z0-9_\-]{1,10}$/i"; //For pro ref varchar(10)
     $alpha2 ="/^[a-z0-9_\-\s]{1,200}$/i"; //For pro_libelle varchar(200)

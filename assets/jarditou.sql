@@ -13,20 +13,15 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */
+/*!40101 SET NAMES utf8mb4 */
 
---
 -- Base de données :  `jarditou`
---
-
 -- --------------------------------------------------------
-
---
 -- Structure de la table `categories`
---
+
 
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
@@ -74,10 +69,7 @@ INSERT INTO `categories` (`cat_id`, `cat_nom`, `cat_parent`) VALUES
 (30, 'Panneaux de clôture', 8);
 
 -- --------------------------------------------------------
-
---
 -- Structure de la table `produits`
---
 
 DROP TABLE IF EXISTS `produits`;
 CREATE TABLE IF NOT EXISTS `produits` (
@@ -137,10 +129,27 @@ INSERT INTO `produits` (`pro_id`, `pro_cat_id`, `pro_ref`, `pro_libelle`, `pro_d
 (40, 9, 'WAZAA', 'Wazaa', NULL, '68.00', 14, 'Vert', 'jpg', '2018-04-27', NULL, 0),
 (41, 9, 'ZOOM', 'Zoom', 'Nunc magna erat, ultrices et facilisis non, viverra in turpis. Nulla orci mi, maximus eu facilisis a, pretium sit amet ex.', '49.80', 223, 'Gris', 'jpg', '2018-08-13', NULL, NULL);
 
---
--- Contraintes pour les tables déchargées
---
 
+/* Table `user` = id_users	us_pseudo	us_password	us_email	us_nom	us_prenom	us_adresse	us_ville	us_codepostal	dateinscription	datevisite */
+
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id_users` int NOT NULL UNIQUE AUTO_INCREMENT ,
+  `us_pseudo` VARCHAR(50) UNIQUE NOT NULL,
+  `us_email` VARCHAR(50) UNIQUE NOT NULL,
+  `us_password` VARCHAR(255) NOT NULL ,
+  `us_nom` VARCHAR(50) NOT NULL,
+  `us_prenom` VARCHAR(50) NOT NULL,
+  `us_adresse` VARCHAR(50) NOT NULL,
+  `us_ville` VARCHAR(50) NOT NULL,
+  `us_codepostal` VARCHAR(50) NOT NULL,
+  `dateinscription` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_users`,`us_pseudo`,`us_email`));
+
+
+
+  
+-- Contraintes pour les tables déchargées
 --
 -- Contraintes pour la table `categories`
 --
@@ -154,6 +163,6 @@ ALTER TABLE `produits`
   ADD CONSTRAINT `fk_produits_cat_id` FOREIGN KEY (`pro_cat_id`) REFERENCES `categories` (`cat_id`);
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */
