@@ -111,6 +111,8 @@ if (empty($pseudo)){
         $requete->bindValue(':Ville',$ville);
         $requete->bindValue(':Postal',$postal);
         $requete->execute();
+        require "assets/PHP/PHP_exo/Email.php";
+        confmail();
         header('Location:Accueil.php');
     }
     catch(PDOException $e){
